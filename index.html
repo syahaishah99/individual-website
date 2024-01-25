@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#my gallery">My Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>IMS 456 student</p>
+            <h1>Hi, I'm <span>Aishah</span><br>Osman from BA240B</h1>
+        </div>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/me.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>My name is Siti Aishah binti Osman. Everyone call me Lopa or Ash. I lived in peaceful city in Dungun, Terengganu. My age is 22 years old and I studies at UITM kota Bharu.I am student of degree in Business Management (Marketing). My birth date is on 9 July 2002 and I born at Hospital Dungun. I am the forth child of five siblings. My favourite food is chicken porridge and drinks is Chocolate.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Video Editor</span><br>Edit video products and short drama story</li>
+                        <li><span>Multilingual</span><br>Fluency in variety language such as English, Mandarin Chinese and Korean</li>
+                        <li><span>Data Analysis</span><br>Proficient in using Microsoft Excel</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Part Time Experience</span><br>Work at a pizza shop in my village, cashier at 7-Eleven store, Mykori Dessert Cafe and more</li>
+                        <li><span>Activity with Evo Club</span><br></li>Join community service and friends of community program, clean the mosque area and join green innovation 
+                        <li><span>Social Media Influencer</span><br></li>Become an affiliate in TikTok apps, promote product on social media like Facebook, Instagram
+                    
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>SPM</span><br>2019</li>
+                        <li><span>STPM</span><br>2020-2021</li>
+                        <li><span>Bachelor Degree</span><br>2022-2025</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -----------my gallery------------ -->
+<div id="my gallery">
+    <div class="container">
+        <h1 class="sub-title">My Gallery</h1>
+        <div class="ash-list">
+            <div class="ash">
+                <img src="images/ash-1.png">
+                <div class="layer">
+                </div>
+            </div>
+            <div class="ash">
+                <img src="images/ash-2.png">
+                <div class="layer">
+                </div>
+            </div>
+            <div class="ash">
+                <img src="images/ash-3.png">
+                <div class="layer">
+                </div>
+            </div>
+        </div>
+        <div class="ash-list">
+            <div class="ash">
+                <img src="images/ash-4.png">
+                <div class="layer">
+                </div>
+            </div>
+            <div class="ash">
+                <img src="images/ash-5.png">
+                <div class="layer">
+                </div>
+            </div>
+            <div class="ash">
+                <img src="images/ash-6.png">
+                <div class="layer">
+    </div>
+</div>
+<!-- ----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-envelope"></i>syahaishah9@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>0149880214</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/syah.0907"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/littlepaaa?s=21"><i class="fa-brands fa-twitter"></i></a>
+                    <a href=">https://www.instagram.com/theashlyy?igsh=NTc4MTIwNjQ2YQ=="></a><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Ashly. Made with <p>&hearts;<p></i> by Aishah Osman</a></p>
+    </div>
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = '< add you own link here >' // add your own app script link here
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
